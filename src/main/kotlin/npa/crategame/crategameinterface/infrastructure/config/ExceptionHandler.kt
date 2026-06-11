@@ -2,7 +2,6 @@ package npa.crategame.crategameinterface.infrastructure.config
 
 import npa.crategame.crategameinterface.domain.exception.PlayerAlreadyExistsException
 import npa.crategame.crategameinterface.domain.exception.PlayerNotFoundException
-import npa.crategame.crategameinterface.infrastructure.persistence.PlayerEntity
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ExceptionHandler
