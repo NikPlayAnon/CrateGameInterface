@@ -25,6 +25,13 @@ class PlayerEntity (
     @Column(name = "updated_at", nullable = false)
     val updatedAt: Instant
 ){
+    // JPA requires this — plugin.jpa would generate it automatically
+    protected constructor() : this(
+        id = UUID.randomUUID(),
+        username = "",
+        createdAt = Instant.now(),
+        updatedAt = Instant.now(),
+    )
 }
 
 fun Player.toEntity() = PlayerEntity(

@@ -1,4 +1,3 @@
-# db.changelog-master.yaml
 databaseChangeLog:
   - includeAll:
       path: db/changelog/changes/

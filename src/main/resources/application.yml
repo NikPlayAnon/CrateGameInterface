@@ -2,10 +2,17 @@ spring:
   application:
     name: CrateGameInterface
   datasource:
-    url: jdbc:postgresql://192.168.0.104:5432/yourdb
+    url: jdbc:postgresql://192.168.0.104:5432/crategame
     username: crategametest
     password: crategameisascum
     driver-class-name: org.postgresql.Driver
 
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+
     liquibase:
       change-log: classpath:db/changelog/db.changelog-master.yaml
+      enabled: true
+logging:
+  level:
+    liquibase: DEBUG
