@@ -16,3 +16,12 @@ spring:
 logging:
   level:
     liquibase: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics  # or "*" to expose all
+  endpoint:
+    health:
+      show-details: always
