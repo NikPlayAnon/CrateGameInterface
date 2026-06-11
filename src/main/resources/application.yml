@@ -8,11 +8,11 @@ spring:
     driver-class-name: org.postgresql.Driver
 
     jpa:
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      open-in-view: false
 
     liquibase:
       change-log: classpath:db/changelog/db.changelog-master.yaml
-      enabled: true
+#      enabled: true
 logging:
   level:
     liquibase: DEBUG
