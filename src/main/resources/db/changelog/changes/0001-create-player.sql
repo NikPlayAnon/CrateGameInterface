@@ -1,4 +1,4 @@
-CREATE TABLE player (
+CREATE TABLE IF NOT EXISTS player (
                         id          UUID        NOT NULL,
                         username    VARCHAR(50) NOT NULL,
                         created_at  TIMESTAMPTZ NOT NULL,
