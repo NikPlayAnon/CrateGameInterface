@@ -1,5 +1,6 @@
 package npa.crategame.crategameinterface.infrastructure.config
 
+import npa.crategame.crategameinterface.domain.exception.ItemNotFoundException
 import npa.crategame.crategameinterface.domain.exception.PlayerAlreadyExistsException
 import npa.crategame.crategameinterface.domain.exception.PlayerNotFoundException
 import org.springframework.http.HttpStatus
@@ -20,4 +21,8 @@ class ExceptionHandler {
     fun handleNotFound(ex: PlayerAlreadyExistsException)=
         mapOf("error" to ex.message)
 
+    @ExceptionHandler(ItemNotFoundException::class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    fun handleItemNotFound(ex: ItemNotFoundException) =
+        mapOf("error" to ex.message)
 }
